@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>심플 NestJS 게시판</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        h1, h2 { border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        .post-list table { width: 100%; border-collapse: collapse; }
+        .post-list th, .post-list td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .post-list th { background-color: #f2f2f2; }
+        .btn { padding: 8px 15px; border: none; cursor: pointer; border-radius: 4px; }
+        .btn-primary { background-color: #007bff; color: white; }
+        .btn-danger { background-color: #dc3545; color: white; margin-left: 10px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .comment-item { border: 1px solid #eee; padding: 10px; margin-bottom: 5px; border-radius: 4px; }
+        .comment-meta { font-size: 0.9em; color: #555; }
+        .search-form { margin-bottom: 20px; display: flex; }
+        .search-form input[type="text"] { flex-grow: 1; margin-right: 10px; }
+        .search-form .btn { flex-grow: 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {{{body}}} 
+        <hr>
+        <p style="text-align: center; font-size: 0.8em; color: #777;">NestJS Simple Forum Project - 2025</p>
+    </div>
+</body>
+</html>

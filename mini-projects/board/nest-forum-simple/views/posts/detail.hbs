@@ -1,0 +1,63 @@
+<a href="/posts">← 목록으로 돌아가기</a>
+<h1>{{post.title}}</h1>
+<p style="color: #777; font-size: 0.9em;">작성일: {{post.createdAt}}</p>
+
+<div style="border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; white-space: pre-wrap;">
+    {{post.content}}
+</div>
+
+<form method="POST" action="/posts/{{post._id}}/delete" style="display: inline;">
+    <button type="submit" class="btn btn-danger" onclick="return confirm('정말로 이 게시글을 삭제하시겠습니까?');">게시글 삭제</button>
+</form>
+
+<hr>
+<h2>✏️ 게시글 수정</h2>
+
+<form method="POST" action="/posts/{{post._id}}/update">
+    <div class="form-group">
+        <label for="update-title">제목</label>
+        <input type="text" id="update-title" name="title" value="{{post.title}}" required>
+    </div>
+    <div class="form-group">
+        <label for="update-content">내용</label>
+        <textarea id="update-content" name="content" rows="5" required>{{post.content}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">수정 완료</button>
+</form>
+
+<hr>
+<h2>💬 댓글</h2>
+
+<div class="comment-list">
+    {{#each comments}}
+    <div class="comment-item">
+        <p>
+            <strong>{{this.nickname}}</strong>: {{this.content}}
+            <span class="comment-meta"> ({{this.createdAt}})</span>
+            <form method="POST" action="/posts/{{../post._id}}/comments/{{@index}}/delete" style="display: inline; margin-left: 10px;">
+                <button type="submit" style="background: none; border: none; color: #dc3545; font-size: 0.8em; cursor: pointer;"
+                        onclick="return confirm('정말로 이 댓글을 삭제하시겠습니까?');">
+                    [삭제]
+                </button>
+            </form>
+        </p>
+    </div>
+    {{else}}
+    <p>등록된 댓글이 없습니다.</p>
+    {{/each}}
+</div>
+
+<hr>
+
+<h3>댓글 작성하기</h3>
+<form method="POST" action="/posts/{{post._id}}/comments">
+    <div class="form-group">
+        <label for="nickname">닉네임 (선택)</label>
+        <input type="text" id="nickname" name="nickname" placeholder="익명">
+    </div>
+    <div class="form-group">
+        <label for="comment-content">내용</label>
+        <textarea id="comment-content" name="content" rows="2" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">댓글 등록</button>
+</form>
