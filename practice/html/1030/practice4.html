@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등번호 예약</title>
+    <style>
+        fieldset {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form action="/reserve-number" method="post">
+        <h1>등번호 예약</h1>
+        <div>
+        <label for="playerName">선수 이름 입력</label>
+        <input type="text" name="playerName" id="playerName" placeholder="이름을 입력하세요" required="required">
+        </div>
+
+            <fieldset>
+                <legend>등번호 선택</legend>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th scope="col">Number</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td>Taken</td>
+                            <td><input type="radio" name="Number" id="Number5"  value="5" disabled="disabled"><label for="Number5"></label></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Available</td>
+                            <td><input type="radio" name="Number" id="Number8" value="8" required><label for="Number8"></label></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Taken</td>
+                            <td><input type="radio" name="Number" id="Number9" value="9" disabled="disabled"><label for="Number9"></label></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Available</td>
+                            <td><input type="radio" name="Number" id="Number10" value="10" required><label for="Number10"></label></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Available</td>
+                            <td><input type="radio" name="Number" id="Number15" value="15" required><label for="Number15"></label></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">선택 가능한 번호만 예약할 수 있습니다.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+            </fieldset>
+        <div>    
+            <button type="submit">제출하기</button>
+        </div>
+    </form>
+</body>
+</html>
