@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko" id="top">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFM — Semantic Layout</title>
+  <style>
+    :root { --gap: 16px; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      color: #111827;
+    }
+    header {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand { font-weight: 800; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+    main {
+      display: grid;
+      gap: var(--gap);
+    }
+    article, aside {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    figure {
+      margin: 0;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    figcaption {
+      font-size: 14px;
+      color: #6b7280;
+      margin-top: 6px;
+    }
+    .top-link {
+      display: inline-block;
+      margin-top: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid #111827;
+      padding: 8px 10px;
+      border-radius: 8px;
+    }
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 16px;
+      text-align: center;
+      color: #6b7280;
+    }
+    /* 768px 이상에서 2열 그리드 */
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">AFM</div>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#news">News</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- 외부 링크: 새 탭 + 보안 속성 -->
+        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main>
+      <article id="news" aria-labelledby="news-title">
+        <h1 id="news-title">Matchday Recap</h1>
+        <p>AFM Social Match 하이라이트와 선수 인터뷰를 정리했습니다.</p>
+
+        <figure>
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1600&auto=format&fit=crop" alt="야간 축구 경기장에서 진행되는 경기 장면" />
+          <figcaption>밤하늘 아래 펼쳐진 아마추어 경기의 열기</figcaption>
+        </figure>
+
+        <p>
+          더 자세한 내용은
+          <a href="https://example.com/recap" target="_blank" rel="noopener noreferrer">상세 리포트</a>
+          를 참고하십시오.
+        </p>
+
+        <!-- 내부 앵커: 맨 위로 -->
+        <a class="top-link" href="#top">맨 위로</a>
+      </article>
+
+      <aside aria-labelledby="aside-title">
+        <h2 id="aside-title">Next Fixture</h2>
+        <ul>
+          <li id="store">AFM Official Store 리뉴얼</li>
+          <li id="contact">문의: contact@afmofficial.kr</li>
+        </ul>
+      </aside>
+    </main>
+  </div>
+
+  <footer>
+    © AFM. All rights reserved.
+  </footer>
+</body>
+</html>

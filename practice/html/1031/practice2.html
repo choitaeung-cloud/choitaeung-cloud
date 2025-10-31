@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Schedule</title>
+  <style>
+    .table-wrap {
+      max-width: 600px;
+      margin: 24px auto;
+      padding: 0 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #e5e7eb;
+      table-layout: fixed;
+    }
+    caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 10px;
+      text-align: center; /* 모든 텍스트 가운데 정렬 */
+      word-break: keep-all;
+    }
+    thead th {
+      background: #f3f4f6;
+    }
+    tbody tr:nth-child(odd) {
+      background: #fafafa; /* 홀수 줄만 옅은 배경 */
+    }
+    tfoot td {
+      background: #f9fafb;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-wrap">
+    <table>
+      <caption>AFM Training — Weekly Schedule</caption>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>09:00–10:00</td>
+          <td>Warm-up</td>
+          <td>Drills</td>
+          <td>Tactics</td>
+          <td>Gym</td>
+          <td>Review</td>
+        </tr>
+        <tr>
+          <td>10:00–11:00</td>
+          <td>Passing</td>
+          <td>Shooting</td>
+          <td>Pressing</td>
+          <td>Set-pieces</td>
+          <td>Recovery</td>
+        </tr>
+        <tr>
+          <td>11:00–12:00</td>
+          <td>Scrimmage</td>
+          <td>Scrimmage</td>
+          <td>Video</td>
+          <td>Gym</td>
+          <td>Video</td>
+        </tr>
+        <!-- 점심 시간: 요일 칸 전체 합치기 -->
+        <tr>
+          <td>12:00–13:00</td>
+          <td colspan="5">Lunch</td>
+        </tr>
+        <tr>
+          <td>13:00–14:00</td>
+          <td>Analysis</td>
+          <td>Drills</td>
+          <td>Conditioning</td>
+          <td>Tactics</td>
+          <td>Free</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="6">Location: AFM Training Ground</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>
