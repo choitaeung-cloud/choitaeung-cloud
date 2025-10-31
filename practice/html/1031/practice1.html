@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Card</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      background: #f5f6f8;
+      padding: 24px;
+    }
+    .card {
+      width: 100%;
+      max-width: 360px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      padding: 20px;
+    }
+    fieldset {
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 16px 16px 20px;
+    }
+    legend {
+      padding: 0 6px;
+      font-weight: 600;
+    }
+    .google {
+      display: block;
+      text-align: center;
+      padding: 10px 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    label {
+      font-size: 14px;
+    }
+    /* username 라벨만 간격 추가 (다른 라벨 영향 없음) */
+    label[for="username"] {
+      margin-bottom: 12px; /* 추가 간격 */
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color .2s;
+    }
+    input::placeholder {
+      color: #888;
+    }
+    input:focus {
+      border-color: #334155;
+    }
+    .actions {
+      margin-top: 14px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .btn {
+      padding: 10px 14px;
+      border: 1px solid #334155;
+      background: #334155;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="google">Log in with Google</div>
+
+      <form>
+        <fieldset>
+          <legend>Login</legend>
+
+          <div class="form-row">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="아이디를 입력하세요" required />
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="비밀번호를 입력하세요" required />
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn">Sign in</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
