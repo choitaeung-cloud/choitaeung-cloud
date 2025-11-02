@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaOrder</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Pizza Order</legend>
+            <div class="info">
+                <div>
+                    <label for="customerName">고객명</label>
+                    <input type="text" id="customerName" name="customerName" placeholder="이름을 입력하세요." required>
+                </div>
+                <div>
+                    <label for="phoneNumber">연락처</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="번호를 입력하세요." required>
+                </div>
+                <div>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="이메일을 입력하세요." required>
+                </div>
+            </div>
+            <div class="selectPizza">
+                <div>
+                    <label for="pizza">피자</label>
+                    <select id="pizza" name="pizza" required>
+                        <option value="" disabled selected hidden>피자를 선택하세요.</option>
+                        <option value="bulgogiPizza">불고기 피자</option>
+                        <option value="cheesePizza">치즈 피자</option>
+                        <option value="hawaiianPizza">하와이안 피자</option>
+                        <option value="combinationPizza">콤비네이션 피자</option>
+                    </select>
+                </div>
+            </div>
+                <fieldset>
+                    <legend>토핑</legend>
+                        <div>
+                            <input type="checkbox" id="addCheese" name="topping" value="addCheeseTopping">
+                            <label for="addCheese">치즈 추가</label>
+                            <input type="checkbox" id="addOlives" name="topping" value="addOlivesTopping">
+                            <label for="addOlives">올리브 추가</label>
+                            <input type="checkbox" id="addHotsauce" name="topping" value="addHotsauceTopping">
+                            <label for="addHotsauce">핫소스 추가</label>
+                        </div>
+                </fieldset>
+                <div>
+                    <label for="arriveTime">희망 배송 시간</label>
+                    <input type="time" id="arriveTime" name="arriveTime" required>
+                </div>   
+                <div> 
+                    <input type="checkbox" id="spoon" name="spoon" required>
+                    <label for="spoon">일회용 수저 동의</label>
+                </div>
+                <div>  
+                    <input type="checkbox" id="personalInfo" name="personalInfo" required>
+                    <label for="personalInfo">개인 정보 활용 동의</label>
+                </div>                
+            <button type="submit">주문하기</button>
+        </fieldset>
+    </form>
+</body>
+</html>
