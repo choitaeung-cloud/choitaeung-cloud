@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+</head>
+<body>
+    <header>
+        <h1>레알 마드리드 직관 티켓 예매</h1>
+    </header>
+
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <label for="match">관람을 희망하는 경기를 고르세요.</label>
+                    <select id="match" name="match" required>
+                        <option value="" disabled selected hidden>경기 선택</option>
+                        <option value="R1">레알 마드리드 vs 바르셀로나</option>
+                        <option value="R2">레알 마드리드 vs 비야레알</option>
+                        <option value="R3">레알 마드리드 vs 발렌시아</option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <legend>좌석 선택</legend>
+                    <input type="radio" id="normal" name="seat" value="normalSeat" required>
+                    <label for="normal">일반석</label>
+                    <input type="radio" id="selected" name="seat" value="selectedSeat">
+                    <label for="selected">지정석</label>
+                    <input type="radio" id="vip" name="seat" value="vipSeat">
+                    <label for="vip">VIP석</label>
+            </fieldset>
+            <fieldset>
+                <legend>부가 옵션</legend>
+                    <input type="checkbox" id="jersey" name="addons" value="chooseJersey" >
+                    <label for="jersey">유니폼 (+212,000원)</label>
+                    <input type="checkbox" id="scarf" name="addons" value="chooseScarf" >
+                    <label for="scarf">스카프 (+56,000원)</label>
+                    <input type="checkbox" id="football" name="addons" value="chooseFootball" >
+                    <label for="football">축구공 (+79,000원)</label>
+            </fieldset>
+            <fieldset>
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" placeholder="이메일을 입력하세요." required>
+                <br>
+                <label for="qty">수량(1인 최대 4매)</label>
+                <input type="number" id="qty" name="ticketQty" min="1" max="4" value="1" required>
+            </fieldset>
+
+            <label for="agree">이용 약관 동의(필수)</label>
+            <input type="checkbox" id="agree" name="agree" required>
+            <div>
+            <button type="submit">예매하기</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=Yc-7IQqcqeM" target="_blank">레알 마드리드 응원가 듣기</a>
+    </footer>
+</body>
+</html>
