@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행사 참가 신청서</title>
+</head>
+<body>
+    <h1>행사 참가 신청서</h1> <h2>하단 작성 요망</h2>
+    <form action="/action_page.php" method="post">
+    <fieldset>
+        <legend>행사 참가 신청서</legend>
+        <div class="info">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">나이</label>
+            <input type="number" id="age" name="age" min="19" max="99" required>
+
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    </fieldset>    
+    <fieldset>
+        <legend>참가 유형</legend>
+            <div class="type">
+                <input type="radio" id="normal" name="type" value="normal" required>
+                <label for="normal">일반 참가자</label>
+                
+                <input type="radio" id="staff" name="type" value="staff">
+                <label for="staff">스태프</label>
+                
+                <input type="radio" id="VIP" name="type" value="vip">
+                <label for="VIP">VIP</label>
+            </div>
+    </fieldset>
+    <fieldset>
+        <legend>참가 프로그램</legend>   
+            <div class="program">
+                <input type="checkbox" id="football" name="program" value="football" required>
+                <label for="football">축구</label>
+
+                <input type="checkbox" id="basketball" name="program" value="basketball">
+                <label for="basketball">농구</label>
+                
+                <input type="checkbox" id="running" name="program" value="running">
+                <label for="running">달리기</label>
+                
+                <input type="checkbox" id="etc" name="program" value="etc">
+                <label for="etc">기타</label>
+            </div>
+    </fieldset>
+    <fieldset>
+        <legend>남기고 싶은 말</legend>
+        <textarea id="comment" name="comment"></textarea>
+    </fieldset>
+        
+    <button type="submit">신청하기</button>
+    </form>
+</body>
+</html>
